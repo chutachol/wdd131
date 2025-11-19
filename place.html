@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the beautiful country of Costa Rica - its nature, culture, and attractions">
+    <title>Costa Rica - The Rich Coast</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Costa Rica</h1>
+        <nav>
+            <ul>
+                <li><a href="#country">Country</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#weather">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="./images/beautiful-aerial.webp">
+                <source media="(min-width: 480px)" srcset="./images/beautiful-aerial.webp">
+                <img src="./images/beautiful-aerial.webp" alt="Beautiful view of Costa Rica's rainforest and coastline">
+            </picture>
+        </section>
+
+        <section id="country" class="country-info">
+            <h2>About Costa Rica</h2>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>Costa Rica, meaning "Rich Coast" in Spanish, is a Central American country known for its incredible biodiversity and commitment to environmental conservation. With coastlines on both the Caribbean Sea and Pacific Ocean, it offers stunning beaches, lush rainforests, and active volcanoes.</p>
+                    <p>The country abolished its army in 1949 and has since invested heavily in education and healthcare. Over 25% of its land is protected in national parks and reserves, making it a premier ecotourism destination.</p>
+                </div>
+                <div class="image-content">
+                    <img src="./images/download.png" alt="Costa Rica flag">
+                    <p>Official Flag of Costa Rica</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="attractions" class="attractions">
+            <h2>Top Attractions</h2>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <h3>Arenal Volcano</h3>
+                    <p>One of the world's most active volcanoes, surrounded by hot springs and lush rainforest.</p>
+                </div>
+                <div class="attraction-card">
+                    <h3>Monteverde Cloud Forest</h3>
+                    <p>A mystical forest reserve with incredible biodiversity and hanging bridges.</p>
+                </div>
+                <div class="attraction-card">
+                    <h3>Manuel Antonio National Park</h3>
+                    <p>Beautiful beaches, hiking trails, and abundant wildlife including monkeys and sloths.</p>
+                </div>
+                <div class="attraction-card">
+                    <h3>Tortuguero National Park</h3>
+                    <p>Known as the "Amazon of Costa Rica," accessible only by boat or plane.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="weather" class="weather">
+            <h2>Weather</h2>
+            <div class="weather-info">
+                <div class="weather-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 16C3.23858 16 1 13.7614 1 11C1 8.23858 3.23858 6 6 6C6.03315 6 6.06622 6.00033 6.09922 6.00098C6.06622 6.00033 6.03315 6 6 6C6.03315 6 6.06622 5.99967 6.09922 5.99902C7.46856 3.57075 10.1019 2 13 2C17.4183 2 21 5.58172 21 10C21 13.866 18.0181 16.919 14.375 16.995L14 17H6Z" stroke="#4A90E2" stroke-width="2"/>
+                        <path d="M12 11V8" stroke="#4A90E2" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M9.5 10.5L7.5 8.5" stroke="#4A90E2" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M14.5 10.5L16.5 8.5" stroke="#4A90E2" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M9 16C9 16 10 18 12 18C14 18 15 16 15 16" stroke="#4A90E2" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="weather-data">
+                    <p><strong>Temperature:</strong> <span id="temperature">72</span>°F</p>
+                    <p><strong>Conditions:</strong> Partly Cloudy</p>
+                    <p><strong>Wind Speed:</strong> <span id="wind-speed">5</span> mph</p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Costa Rica Tourism | Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
