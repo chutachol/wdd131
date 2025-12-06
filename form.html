@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form | TechGadget Reviews</title>
+    <meta name="description" content="Submit your review for tech products and gadgets">
+    <meta name="author" content="Chut Achol">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>🛒 TechGadget Reviews</h1>
+                <p class="tagline">Share your experience with tech products</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="form-header">
+                <h2>Product Review Form</h2>
+                <p>Help other customers make informed decisions by sharing your experience with tech products.</p>
+                <p class="required-note"><span class="required-marker">*</span> indicates required fields</p>
+            </div>
+
+            <form id="reviewForm" method="get" action="review.html">
+                <!-- Product Name -->
+                <div class="form-group required">
+                    <label for="productName">
+                        Product Name <span class="required-marker">*</span>
+                    </label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                    <p class="field-help">Choose the product you want to review from our catalog</p>
+                </div>
+
+                <!-- Overall Rating -->
+                <div class="form-group required">
+                    <label>
+                        Overall Rating <span class="required-marker">*</span>
+                    </label>
+                    <div class="rating-container">
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5" title="Excellent">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="Good">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="Average">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="Poor">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="Very Poor">★</label>
+                        </div>
+                        <div class="rating-labels">
+                            <span>1 - Very Poor</span>
+                            <span>5 - Excellent</span>
+                        </div>
+                    </div>
+                    <p class="field-help">Rate your overall satisfaction with the product</p>
+                </div>
+
+                <!-- Date of Installation -->
+                <div class="form-group required">
+                    <label for="installDate">
+                        Date of Installation <span class="required-marker">*</span>
+                    </label>
+                    <input type="date" id="installDate" name="installDate" required>
+                    <p class="field-help">When did you install or start using this product?</p>
+                </div>
+
+                <!-- Useful Features -->
+                <div class="form-group">
+                    <label>Useful Features (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature1" name="features" value="easeOfUse">
+                            <label for="feature1">Easy to Use</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature2" name="features" value="durability">
+                            <label for="feature2">Durable/Built to Last</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature3" name="features" value="performance">
+                            <label for="feature3">High Performance</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature4" name="features" value="design">
+                            <label for="feature4">Great Design</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature5" name="features" value="value">
+                            <label for="feature5">Good Value for Money</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="feature6" name="features" value="support">
+                            <label for="feature6">Good Customer Support</label>
+                        </div>
+                    </div>
+                    <p class="field-help">Select the features you found most useful</p>
+                </div>
+
+                <!-- Written Review -->
+                <div class="form-group">
+                    <label for="reviewText">Written Review</label>
+                    <textarea id="reviewText" name="reviewText" rows="6" 
+                              placeholder="Share your detailed experience with the product..."></textarea>
+                    <p class="field-help">Optional: Provide detailed feedback about your experience</p>
+                </div>
+
+                <!-- User Name -->
+                <div class="form-group">
+                    <label for="userName">Your Name (Optional)</label>
+                    <input type="text" id="userName" name="userName" 
+                           placeholder="Enter your name">
+                    <p class="field-help">Leave blank if you prefer to remain anonymous</p>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">
+                        Submit Review
+                    </button>
+                    <button type="reset" class="reset-btn">
+                        Clear Form
+                    </button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="currentYear"></span> 🏀💻 Chut Achol 🏀💻 &middot; Kampala, Uganda</p>
+            <p>Last modified: <span id="lastModified"></span></p>
+            <p class="footer-note">TechGadget Reviews - Helping consumers make informed decisions</p>
+        </footer>
+    </div>
+</body>
+</html>
