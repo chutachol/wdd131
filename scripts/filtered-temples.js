@@ -1,4 +1,4 @@
-// Complete temple array with additional temples
+// Complete temple array with additional temples - FIXED IMAGE URLs
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -62,14 +62,16 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 41010,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x225/rome-italy-temple-exterior-2018-1072143-wallpaper.jpg"
+        // FIXED URL - Using reliable working URL
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-6932.jpg"
     },
     {
         templeName: "São Paulo Brazil",
         location: "São Paulo, Brazil",
         dedicated: "1978, November, 2",
         area: 59246,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x250/sao-paulo-brazil-temple-lds-910891-wallpaper.jpg"
+        // FIXED URL - Using reliable working URL
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-14825.jpg"
     }
 ];
 
@@ -107,7 +109,7 @@ const filterFunctions = {
     small: (temple) => temple.area < 10000
 };
 
-// Create temple card element
+// Create temple card element with error handling for images
 function createTempleCard(temple) {
     const card = document.createElement('article');
     card.className = 'temple-card';
@@ -115,13 +117,15 @@ function createTempleCard(temple) {
     // Format area with commas
     const formattedArea = temple.area.toLocaleString();
     
+    // Create card with error handling for broken images
     card.innerHTML = `
         <img src="${temple.imageUrl}" 
              alt="${temple.templeName} Temple" 
              class="temple-image"
              loading="lazy"
              width="400"
-             height="250">
+             height="250"
+             onerror="this.onerror=null; this.src='https://via.placeholder.com/400x250/2c3e50/ffffff?text=${encodeURIComponent(temple.templeName)}'">
         <div class="temple-info">
             <h3>${temple.templeName}</h3>
             <p class="location">${temple.location}</p>
