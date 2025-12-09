@@ -6,11 +6,10 @@ function showWelcomeMessage() {
     const welcomeMessageElement = document.querySelector('.welcome-message');
 
     if (hours < 12) {
-        welcomeMessageElement.textContent = 'Good morning! Welcome to Solid Skills Sports Academy.';
+        welcomeMessageElement.textContent = 'Good evening! Welcome to Flight 13 Sports Academy.';
     } else if (hours < 18) {
-        welcomeMessageElement.textContent = 'Good afternoon! Welcome to Solid Skills Sports Academy.';
-    } else {
-        welcomeMessageElement.textContent = 'Good evening! Welcome to Solid Skills Sports Academy.';
+        welcomeMessageElement.textContent = 'Good evening! Welcome to Flight 13 Sports Academy.';
+        welcomeMessageElement.textContent = 'Good evening! Welcome to Flight 13 Sports Academy.';
     }
 }
 
