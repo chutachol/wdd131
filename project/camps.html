@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camps - Flight 13 Sports Academy</title>
-    <meta name="description" content="A website for information about Flight 13 Sports Academy.">
+    <meta name="description" content="Register for our basketball camps and training programs">
     <meta name="author" content="Chut Achol">
     <link rel="stylesheet" href="styles/siteplan.css">
 </head>
@@ -26,47 +26,52 @@
     <main>
         <section>
             <h2>Basketball Camps</h2>
-            <p>Information on upcoming and past basketball camps with dates, locations, and registration details.</p>
-            <form>
-                <label for="name">Name:</label>
+            <p>Join our expert-led basketball camps designed for all skill levels. Improve your game with professional coaching.</p>
+            <form id="campForm">
+                <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" autocomplete="name" required>
-                <label for="email">Email:</label>
+                
+                <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" autocomplete="email" required>
+                
                 <label for="camp">Select Camp:</label>
                 <select id="camp" name="camp" autocomplete="off">
-                    <option value="summer">Summer Camp</option>
-                    <option value="winter">Winter Camp</option>
+                    <option value="summer">Summer Camp - June 15-30 ($499)</option>
+                    <option value="winter">Winter Camp - December 10-20 ($399)</option>
+                    <option value="spring">Spring Camp - March 15-25 ($449)</option>
+                    <option value="fall">Fall Camp - October 5-15 ($449)</option>
                 </select>
-                <input type="submit" value="Register">
+                
+                <input type="submit" value="Register Now">
             </form>
         </section>
         <section>
             <h2>Camp Sessions</h2>
             <div class="camp-session" style="background-image: url('images/image4.jpg');">
                 <h3>Summer Camp</h3>
-                <p>Details about summer camp...</p>
+                <p>Intensive 2-week training for all skill levels. Focus on fundamentals, team play, and advanced techniques.</p>
             </div>
             <div class="camp-session" style="background-image: url('images/image5.jpg');">
                 <h3>Winter Camp</h3>
-                <p>Details about winter camp...</p>
+                <p>Holiday basketball camp focusing on skill development and game strategy during winter break.</p>
             </div>
             <div class="camp-session" style="background-image: url('images/image6.jpg');">
                 <h3>Spring Camp</h3>
-                <p>Details about spring camp...</p>
+                <p>Pre-season preparation camp focusing on conditioning and competitive play readiness.</p>
             </div>
             <div class="camp-session" style="background-image: url('images/image7.jpg');">
                 <h3>Fall Camp</h3>
-                <p>Details about fall camp...</p>
+                <p>Skills development camp focusing on individual improvement and team dynamics for the upcoming season.</p>
             </div>
         </section>
     </main>
     <footer>
         <section id="wireframe">
-            <h2>Wireframe</h2>
-            <h3>Mobile View</h3>
-            <img src="images/mobile-wireframe.png" alt="Mobile wireframe" class="wireframe">
-            <h3>Desktop View</h3>
-            <img src="images/desktop-wireframe.png" alt="Desktop wireframe" class="wireframe">
+            <h2>Website Design</h2>
+            <h3>Mobile View Layout</h3>
+            <img data-src="images/mobile-wireframe.png" src="images/placeholder.jpg" alt="Mobile wireframe" class="wireframe" loading="lazy">
+            <h3>Desktop View Layout</h3>
+            <img data-src="images/desktop-wireframe.png" src="images/placeholder.jpg" alt="Desktop wireframe" class="wireframe" loading="lazy">
         </section>
         <p class="welcome-message">&copy; 2024 Flight 13 Sports Academy</p>
         <div class="social-media-links">
