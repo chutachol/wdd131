@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camps - Solid Skills Sports Academy</title>
+    <meta name="description" content="A website for information about Solid Skills Sports Academy.">
+    <meta name="author" content="Erjok Agot Erjok">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+    <header>
+        <img src="images/sossalogo.png" alt="Solid Skills Sports Academy Logo" class="logo">
+        <h1>Solid Skills Sports Academy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="camps.html">Camps</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="footage.html">Footage</a></li>
+                <li><a href="outreach.html">Outreach</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Basketball Camps</h2>
+            <p>Information on upcoming and past basketball camps with dates, locations, and registration details.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <label for="camp">Select Camp:</label>
+                <select id="camp" name="camp" autocomplete="off">
+                    <option value="summer">Summer Camp</option>
+                    <option value="winter">Winter Camp</option>
+                </select>
+                <input type="submit" value="Register">
+            </form>
+        </section>
+        <section>
+            <h2>Camp Sessions</h2>
+            <div class="camp-session" style="background-image: url('images/camp1.png');">
+                <h3>Summer Camp</h3>
+                <p>Details about summer camp...</p>
+            </div>
+            <div class="camp-session" style="background-image: url('images/camp2.png');">
+                <h3>Winter Camp</h3>
+                <p>Details about winter camp...</p>
+            </div>
+            <div class="camp-session" style="background-image: url('images/camp3.png');">
+                <h3>Spring Camp</h3>
+                <p>Details about spring camp...</p>
+            </div>
+            <div class="camp-session" style="background-image: url('images/camp4.png');">
+                <h3>Fall Camp</h3>
+                <p>Details about fall camp...</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="wireframe">
+            <h2>Wireframe</h2>
+            <h3>Mobile View</h3>
+            <img src="images/mobile-wireframe.png" alt="Mobile wireframe" class="wireframe">
+            <h3>Desktop View</h3>
+            <img src="images/desktop-wireframe.png" alt="Desktop wireframe" class="wireframe">
+        </section>
+        <p class="welcome-message">&copy; 2024 Solid Skills Sports Academy</p>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            <a href="https://www.twitter.com" target="_blank">X</a>
+        </div>
+    </footer>
+    <script src="scripts/siteplan.js"></script>
+</body>
+</html>
